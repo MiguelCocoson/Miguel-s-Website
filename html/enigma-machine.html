@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Engima Machine</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/enigma-machine.css">
+</head>
+
+<body>
+    <section>
+    <header>
+        <h1>The Enigma Machine</h1>
+        <img id='image'
+            src='https://upload.wikimedia.org/wikipedia/commons/d/dd/Enigma_rotors_with_alphabet_rings.jpg'
+            alt="The Enigma Machine"
+            width="50%"
+          />
+    </header>
+    </section>
+        <hr>
+    <section>
+    <main>
+            <h2>
+                Valid input: A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, "." and "SPACE"
+            </h2>
+            <article>
+                <div>
+                    <label for="message"></label>
+                    <input type="text" id="message_input" placeholder="WRITE A MESSAGE">
+                </div>
+                <div class = "rotors">
+                    <label for="rotor1">Select the first rotor setting (A number from 1 to 38):</label>
+                    <input type="text" id="rotor1" name="rotor1">
+                </div>
+                <div class = "rotors">
+                    <label for="rotor2">Select the second rotor setting (A number from 1 to 38):</label>
+                    <input type="text" id="rotor2" name="rotor2">
+                </div>
+                <div class = "rotors">
+                    <label for="rotor3">Select the third rotor setting (A number from 1 to 38):</label>
+                    <input type="text" id="rotor3" name="rotor3">
+                </div>
+                <div>
+                    <input type="button" id="encrypt" value="ENCRYPT/DECRYPT">
+                </div>
+                <div>
+                    <label for="message_output">Encrypted/Decrypted message:</label>
+                    <input type="text" id="message_output" name="message_output" disabled>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        &copy;<span id="year"></span> | Final Proyect | Lesson 6
+    </footer>
+    <script src="/javascript/enigma-machine.js"></script>
+</body>
+
+</html>

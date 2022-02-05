@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Raleway:wght@500&display=swap');
+
+:root {
+    --color-neon: rgb(36, 105, 255);
+}
+
+body {
+  background-color: black;
+  font-family: 'Quicksand', 'Courier Bold', sans-serif;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    padding-top: 3em;
+    text-align: center;
+    list-style: none;
+}
+
+.neon {
+    color: var(--color-neon);
+    font-size: 1em;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    border: var(--color-neon) 0.125em solid;
+    padding: 0.25em;
+    width: 10em;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.2em currentColor;
+    box-shadow: inset 0 0 1em 0 var(--color-neon), 0 0 1em 0 var(--color-neon);
+    position: relative;
+}
+
+.neon::before {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background: var(--color-neon);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1.5em);
+    opacity: 0.7;
+}
+
+.neon::after {
+    background-color: var(--color-neon);
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--color-neon);
+    opacity: 0;
+    transition: opacity 300ms linear;
+}
+
+.neon:hover, .neon:focus {
+    background: var(--color-neon);
+    color: currentColor;
+    text-shadow: none;
+}
+
+.neon:hover::before, .neon:hover::after, .neon:focus::before, .neon:focus::after {
+    opacity: 1;
+}
+
+h1 {
+    color: var(--color-neon);
+    text-align: center;
+    padding: 2em;
+}
+
+#neon-list {
+    border: var(--color-neon) 0.125em solid;
+    border-radius: 0.25em;
+    width: 500px;
+    box-shadow: inset 0 0 1em 0 var(--color-neon), 0 0 1em 0 var(--color-neon);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0em;
+}
+
+.links {
+    color: var(--color-neon);
+    font-size: 1em;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    text-shadow: 0 0 0.2em currentColor;
+    position: relative;
+    padding: 1em;
+    width: 470px;
+}
+
+.links::after {
+    background-color: var(--color-neon);
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--color-neon);
+    opacity: 0;
+    transition: opacity 300ms linear;
+}
+
+.links:hover, .neon:focus {
+    background: var(--color-neon);
+    color: currentColor;
+    text-shadow: none;
+}
+
+.links:hover::before, .links:hover::after, .links:focus::before, .links:focus::after {
+    opacity: 1;
+}
+
+@media screen and (max-width: 750px) {
+    nav ul {
+        border: var(--color-neon) 0.125em solid;
+        border-radius: 0.25em;
+        width: 200px;
+        box-shadow: inset 0 0 1em 0 var(--color-neon), 0 0 1em 0 var(--color-neon);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0em;
+    }
+    
+    .neon {
+        color: var(--color-neon);
+        font-size: 1em;
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: none;
+        text-shadow: 0 0 0.2em currentColor;
+        position: relative;
+        width: 194px;
+        border: none;
+        box-shadow: none;
+    }
+
+    h1 {
+        padding: 2em;
+        font-size: 100%;
+    }
+
+    .neon::before {
+        background: none;
+    }
+    
+    #neon-list {
+        width: 200px;
+    }
+    
+    .links {
+        width: 170px;
+    }
+}
