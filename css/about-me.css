@@ -168,7 +168,7 @@ nav ul {
     float:left;
     margin: -150px 0 0 -50px;
     display: block;
-    clip-path: polygon(100% 0, 0 50%, 100% 100%);;
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
 }
  
 #bullets {
@@ -259,22 +259,18 @@ img {
     #slide2:checked ~ #controls label:nth-child(1),
     #slide3:checked ~ #controls label:nth-child(2),
     #slide4:checked ~ #controls label:nth-child(3) {
-        background: var(--color-neon);
-        float:left;
-        margin: -150px 0 0 -50px;
-        display: block;
-        clip-path: polygon(100% 0, 50% 50%, 100% 100%);;
+        clip-path: polygon(100% 0, 50% 50%, 100% 100%);
     }
     
     #slide1:checked ~ #controls label:nth-child(2),
     #slide2:checked ~ #controls label:nth-child(3),
     #slide3:checked ~ #controls label:nth-child(4),
     #slide4:checked ~ #controls label:nth-child(1) {
-        background: var(--color-neon);
-        float:right;
-        margin: -150px -50px 0 0;
-        display: block;
         clip-path: polygon(0 0, 0% 100%, 50% 50%);
+    }
+
+    #bullets {
+        margin-top: 100px;
     }
     
     #bullets label {
