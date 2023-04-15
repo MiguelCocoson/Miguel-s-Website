@@ -10,7 +10,9 @@ body {
 }
 
 main, header {
-    max-width: 500px;
+    max-width: 1000px;
+    margin: 0 auto;
+    
 }
 
 nav ul {
