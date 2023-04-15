@@ -9,6 +9,10 @@ body {
   font-family: 'Quicksand', 'Courier Bold', sans-serif;
 }
 
+main, header {
+    max-width: 500px;
+}
+
 nav ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
